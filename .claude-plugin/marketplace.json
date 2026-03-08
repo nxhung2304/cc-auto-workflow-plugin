@@ -1,8 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "auto-workflow",
-  "slug": "cc-auto-workflow-plugin",
-  "version": "0.1.0",
+  "name": "cc-auto-workflow",
   "description": "Automate development workflow: specs → stories → issues → GitHub → implementation",
   "owner": {
     "name": "nxhung2304",
@@ -11,73 +9,12 @@
   "plugins": [
     {
       "name": "cc-auto-workflow",
-      "description": "Auto workflow: specs → stories → approved issues → GitHub → implementation (Rails/Flutter support)",
+      "description": "Automate development workflow: specs → stories → issues → GitHub → implementation",
       "version": "0.1.0",
-      "source": "./.claude-plugin/plugin.json",
-      "tags": ["workflow", "github", "rails", "flutter", "automation"]
+      "source": {
+        "source": "github",
+        "repo": "nxhung2304/cc-auto-workflow-plugin"
+      }
     }
-  ],
-  "license": "MIT",
-  "keywords": [
-    "workflow",
-    "automation",
-    "issue-management",
-    "github",
-    "specs",
-    "development",
-    "prd",
-    "stories"
-  ],
-  "homepage": "https://github.com/nxhung2304/cc-auto-workflow-plugin",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nxhung2304/cc-auto-workflow-plugin"
-  },
-  "categories": ["workflow", "development", "project-management"],
-  "features": [
-    "Auto-detect framework (Rails, Flutter, React, Django)",
-    "Generate issues from story breakdown",
-    "Sync issues to GitHub",
-    "Implement issues with automated workflow",
-    "Framework-specific coding standards",
-    "Code review guidelines"
-  ],
-  "requirements": {
-    "tools": ["read", "write", "edit", "grep", "glob", "bash"],
-    "optional": ["mcp__github__issues", "mcp__slack__notify"]
-  },
-  "commands": [
-    {
-      "name": "generate-issues",
-      "description": "Create issues from specs/story.md file"
-    },
-    {
-      "name": "sync-github-issues",
-      "description": "Sync local issue files to GitHub Issues"
-    },
-    {
-      "name": "implement-issue",
-      "description": "Implement a feature from a GitHub Issue"
-    },
-    {
-      "name": "review-specs",
-      "description": "Review specification for completeness and clarity"
-    },
-    {
-      "name": "review-code",
-      "description": "Review code against project rules and standards"
-    }
-  ],
-  "setup": {
-    "instructions": "Run 'bash setup.sh' to initialize your project",
-    "time": "2 minutes"
-  },
-  "documentation": {
-    "readme": "README.md",
-    "installation": "INSTALL.md",
-    "guide": "FRAMEWORKS.md"
-  },
-  "status": "beta",
-  "maturity": "partial",
-  "notes": "Core workflow (issues, GitHub sync, implementation) is functional. Advanced skills (e.g., code review) are planned for future releases."
+  ]
 }

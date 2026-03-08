@@ -1,6 +1,5 @@
 {
-  "name": "Claude Code Auto Workflow Plugin",
-  "slug": "cc-auto-workflow-plugin",
+  "name": "cc-auto-workflow",
   "version": "0.1.0",
   "description": "Automate development workflow: specs → stories → issues → GitHub → implementation",
   "author": {
@@ -9,22 +8,5 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/nxhung2304/cc-auto-workflow-plugin",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nxhung2304/cc-auto-workflow-plugin"
-  },
-  "keywords": [
-    "workflow",
-    "automation",
-    "issue-management",
-    "github",
-    "development"
-  ],
-  "skills": [
-    "generate-issues",
-    "sync-github-issues",
-    "implement-issue",
-    "review-specs",
-    "review-code"
-  ]
+  "repository": "https://github.com/nxhung2304/cc-auto-workflow-plugin"
 }

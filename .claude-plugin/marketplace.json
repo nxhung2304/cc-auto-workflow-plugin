@@ -13,7 +13,7 @@
       "name": "cc-auto-workflow",
       "description": "Auto workflow: specs → stories → approved issues → GitHub → implementation (Rails/Flutter support)",
       "version": "0.1.0",
-      "source": "./plugin.json",
+      "source": "./.claude-plugin/plugin.json",
       "tags": ["workflow", "github", "rails", "flutter", "automation"]
     }
   ],

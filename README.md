@@ -3,6 +3,34 @@
 Automate: **specs → stories → issues → GitHub → code**
 
 ## Quick Start
+
+### For Plugin Users (Installed via Marketplace)
+After installing the plugin, run the setup skill to initialize your project:
+```bash
+/cc-auto-workflow:setup
+```
+
+Or initialize manually using the setup script:
+```bash
+curl https://raw.githubusercontent.com/nxhung2304/cc-auto-workflow-plugin/main/setup.sh | bash
+```
+
+Or manually initialize:
+```bash
+# 1. Create specs directory
+mkdir -p specs/{rules,issues,designs,comments}
+
+# 2. Create your PRD and stories
+code specs/prd.md    # Write requirements
+code specs/story.md  # Format: - [ ] [#]. [title]
+
+# 3. Start using commands
+/cc-auto-workflow:generate-issues all
+```
+
+[View setup script →](https://github.com/nxhung2304/cc-auto-workflow-plugin/blob/main/setup.sh)
+
+### For Local Development
 ```bash
 bash setup.sh
 ```
@@ -15,29 +43,29 @@ code specs/story.md  # Format: - [ ] [#]. [title]
 ```
 **2️⃣ Generate Issues**
 ```bash
-/generate-issues all
+/cc-auto-workflow:generate-issues all
 ```
 **3️⃣ Review & Approve**
 Edit `specs/issues/*.md`, change `pending` → `approved`
 
 **4️⃣ Sync to GitHub**
 ```bash
-/sync-github-issues
+/cc-auto-workflow:sync-github-issues
 ```
 **5️⃣ Implement**
 ```bash
-/implement-issue 1
+/cc-auto-workflow:implement-issue 1
 ```
 
 ## Commands
 
 | Command | Purpose |
 |---------|---------|
-| `/generate-issues all` | Create issues |
-| `/sync-github-issues` | Push to GitHub |
-| `/implement-issue [#]` | Implement |
-| `/review-specs [#]` | Review spec |
-| `/review-code [#]` | Review code |
+| `/cc-auto-workflow:generate-issues all` | Create issues from stories |
+| `/cc-auto-workflow:sync-github-issues` | Push approved issues to GitHub |
+| `/cc-auto-workflow:implement-issue [#]` | Implement a specific issue |
+| `/cc-auto-workflow:review-specs [#]` | Review issue spec |
+| `/cc-auto-workflow:review-code [#]` | Review implementation |
 
 ## Requirements
 

@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostModelResponse": [
+      {
+        "matcher": "generate-issues|sync-github-issues|implement-issue",
+        "hooks": [
+          {
+            "type": "message",
+            "message": "💡 First time? Run `/cc-auto-workflow:setup` to initialize your project structure."
+          }
+        ]
+      }
+    ]
+  }
+}
